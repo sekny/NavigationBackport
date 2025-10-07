@@ -37,7 +37,6 @@ public struct NBNavigationStack<Root: View, Data: Hashable>: View {
 				
 				.onFirstAppear {
 					// We can only access the StateObject once the view has been added to the view tree.
-					print("NBNavigationStack: onFirstAppear")
 					navigator.pathBinding = path
 				}
 		}.navigationViewStyle(supportedNavigationViewStyle)
@@ -49,7 +48,6 @@ public struct NBNavigationStack<Root: View, Data: Hashable>: View {
 		self.unownedPath = path
 		self.root = root()
 		
-		print("NBNavigationStack init(path:")
 		self.navigator.pathBinding = self.path
 	}
 }
